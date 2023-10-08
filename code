@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main ()
+{
+    ifstream fin("nraparitii.in");
+    ofstream fout("nraparitii.out");
+    
+    long long v[1001], n, i, nraparitii = 0;
+    fin >> n;
+    
+    for(i = 1; i <= n; i++)
+    {
+        fin >> v[i];
+    }
+    
+    for(i = 1; i <= n; i++)
+    {
+        if(v[i] == v[n])
+        {
+            nraparitii++;
+        }
+    }
+    
+    fout << nraparitii;
+}
